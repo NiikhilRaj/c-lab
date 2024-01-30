@@ -1,29 +1,16 @@
 #include<stdio.h>
 void main()
 {
-    float n1, n2;
-    char c;
-    printf("Select an operator (+ - * /): ");
-    scanf("%c", &c);
-    printf("Enter two numbers: ");
-    scanf("%f %f", &n1, &n2);
-
-    switch (c)
+    int a, b, c;
+    printf("Enter the three sides of a triangle: ");
+    scanf("%d %d %d", &a, &b, &c);
+    if ((a+b)>c || (a+c)>b || (b+c)>a)
     {
-    case '+':
-        printf("%.1f + %.1f = %.1f\n", n1, n2, n1+n2);
-        break;
-    case '-':
-        printf("%.1f - %.1f = %.1f\n", n1, n2, n1-n2);
-        break;
-    case '*':
-        printf("%.1f * %.1f = %.1f\n", n1, n2, n1*n2);
-        break;
-    case '/':
-        printf("%.1f / %.1f = %.1f\n", n1, n2, n1/n2);
-        break;
-    default:
-        printf("Error ! operator is not correct");
-        break;
+        printf("the traingle is valid\n");
     }
+    else
+    {
+        printf("The triangle is not valid\n");
+    }
+    
 }

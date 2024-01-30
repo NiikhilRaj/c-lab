@@ -1,22 +1,22 @@
 #include<stdio.h>
 void main()
 {
-    char c;
-    printf("Enter an alphabet:");
-    scanf("%c", &c);
-    if (96<c<123)
+    int n1, n2,n3;
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &n1, &n2, &n3);
+    if (n1>n2 && n1>n3)
     {
-        c = c-32;
-        printf("The upercase for the entered letter is'%c'\n", c);
+        printf("The largest number is %d\n", n1);
     }
     
-    else if (64<c<91)
-    {
-        printf("You have entered '%c' which is already in uppercase\n", c);
-    }
-    else 
-    {
-        printf("Enter a valid alphabet\n");
-    }
-    
+else if (n2>n1 && n2>n3)
+{
+    printf("The largest number is %d\n", n2);
+
+}
+else
+{
+    printf("The largest number is %d", n3);
+}
+
 }

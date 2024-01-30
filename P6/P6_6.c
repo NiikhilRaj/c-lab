@@ -2,34 +2,19 @@
 void main()
 {
     int m;
-    printf("Enter the marks secured: ");
+    printf("Enter the month number: ");
     scanf("%d", &m);
-    if (m<=100 && m>=90)
+    if (m==1||m==3||m==5||m==7||m==8||m==10||m==12)
     {
-        printf("Secured grade is O\n");
+        printf("The number of days is 31\n");
     }
-    else if (m<=89 && m>=80)
+    else if (m==4||m==6||m==9||m==11)
     {
-        printf("Secured grade is A\n");
+        printf("The number of days is 30\n");
     }
-    else if (m<=79 && m>=70)
+    else if (m==2)
     {
-        printf("Secured grade is B\n");
+        printf("The number of days is 28\n");
     }
-    else if (m<=69 && m>=60)
-    {
-        printf("Secured grade is C\n");
-    }
-    else if (m<=59 && m>=50)
-    {
-        printf("Secured grade is D\n");
-    }
-    else if (m<=49 && m>=40)
-    {
-        printf("Secured grade is E\n");
-    }
-    else if (m<40 )
-    {
-        printf("Secured grade is F\n");
-    }
+    
 }
