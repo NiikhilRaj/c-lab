@@ -1,29 +1,35 @@
 #include<stdio.h>
-#include<math.h>
 void main()
 {
-    float r1, r2, d, a, b, c;
-    printf("Enter the values of a b c:");
-    scanf("%f %f %f", &a, &b, &c);
-    d = (b*b)-(4*a*c);
-
-    switch ((int)d)
+    int m;
+    printf("Enter the marks secured: ");
+    scanf("%d", &m);
+    if (m<=100 && m>=90)
     {
-    case 0:
-        r1= (-b)/(2*a);
-        printf("The roots are real and equal \nRoots are %.2f both\n", r1);
-        break;
-    case 1:
-    case -1:{
-        r1= (-b+(sqrt(d)))/(2*a);
-        r2= (-b-(sqrt(d)))/(2*a);
-        printf("The roots are real & unequal. \nRoots are %.2f and %.2f\n", r1, r2);
+        printf("Secured grade is O\n");
     }
-
-    default:
-        float real_part = -b / (2 * a);
-        float imag_part = sqrt(-d) / (2 * a);
-        printf("Complex roots: %.2f + %.2fi and %.2f - %.2fi\n", real_part, imag_part, real_part, imag_part);
-        break;
+    else if (m<=89 && m>=80)
+    {
+        printf("Secured grade is A\n");
+    }
+    else if (m<=79 && m>=70)
+    {
+        printf("Secured grade is B\n");
+    }
+    else if (m<=69 && m>=60)
+    {
+        printf("Secured grade is C\n");
+    }
+    else if (m<=59 && m>=50)
+    {
+        printf("Secured grade is D\n");
+    }
+    else if (m<=49 && m>=40)
+    {
+        printf("Secured grade is E\n");
+    }
+    else if (m<40 )
+    {
+        printf("Secured grade is F\n");
     }
 }

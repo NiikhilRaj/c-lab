@@ -1,35 +1,29 @@
 #include<stdio.h>
 void main()
 {
-    int n;
-    printf("Enter the weekday: ");
-    scanf("%d", &n);
+    float n1, n2;
+    char c;
+    printf("Select an operator (+ - * /): ");
+    scanf("%c", &c);
+    printf("Enter two numbers: ");
+    scanf("%f %f", &n1, &n2);
 
-    switch (n)
+    switch (c)
     {
-    case 1:
-        printf("This is Monday\n");
+    case '+':
+        printf("%.1f + %.1f = %.1f\n", n1, n2, n1+n2);
         break;
-    case 2:
-        printf("This is Tuesday\n");
+    case '-':
+        printf("%.1f - %.1f = %.1f\n", n1, n2, n1-n2);
         break;
-    case 3:
-        printf("This is Wednesday\n");
+    case '*':
+        printf("%.1f * %.1f = %.1f\n", n1, n2, n1*n2);
         break;
-    case 4:
-        printf("This is Thursday\n");
-        break;
-    case 5:
-        printf("This is Friday\n");
-        break;
-    case 6:
-        printf("This is Saturday\n");
-        break;
-    case 7:
-        printf("This is Sunday\n");
+    case '/':
+        printf("%.1f / %.1f = %.1f\n", n1, n2, n1/n2);
         break;
     default:
-        printf("Error ! enter a valid weekday\n");
+        printf("Error ! operator is not correct");
         break;
     }
 }
