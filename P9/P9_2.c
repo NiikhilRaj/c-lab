@@ -1,24 +1,15 @@
 #include<stdio.h>
 void main()
 {
-    int n, sum=0;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    for (int i = 1; i < n; i++)
+    int a, sum=0, digit, n1=0;
+    printf("ENter a number: ");
+    scanf("%d", &a);
+    n1=a;
+    while (a>0)
     {
-        if ((n%i)==0)
-        {
-            sum= sum+i;
-        }
-        
+        digit = a%10;
+        sum= sum + digit;
+        a = a/10;
     }
-    if (sum==n)
-    {
-        printf("the given number is perfect\n");
-    }
-    else
-    {
-        printf("The given number is not perfect\n");
-    }
-    
+    printf("Sum of digit s of %d is %d\n",n1, sum );
 }

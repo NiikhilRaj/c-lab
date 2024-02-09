@@ -1,0 +1,7 @@
+wap to calculate the sum of digit of a number
+
+wap to find the frequency of each digit in a given number
+
+wap to print the fibonacci series 1 to n terms
+
+wap to find 1s complement of a binary number
