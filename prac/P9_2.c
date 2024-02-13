@@ -20,5 +20,4 @@ void main()
     {
         printf("The given number is not perfect\n");
     }
-    
 }

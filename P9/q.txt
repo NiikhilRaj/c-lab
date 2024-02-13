@@ -1,3 +1,5 @@
+wap to swap 1st an dlast
+
 wap to calculate the sum of digit of a number
 
 wap to find the frequency of each digit in a given number
