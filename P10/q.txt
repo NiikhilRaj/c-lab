@@ -1,0 +1,1 @@
+wap to create an integer element input and display it
