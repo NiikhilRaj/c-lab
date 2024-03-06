@@ -14,15 +14,16 @@ void main()
     for (int i = 0; i < a; i++)
     {
         temp=n[i];
-        for(int j=0;j<a;j++)
+        for(int j=i+1;j<a;j++)
         {
             if(temp>n[j])
-              {p=j;
-              temp=n[j];}
+              {
+                p=j;
+               temp=n[p];
+              }
         }
-        temp=n[i];
-        n[i]=n[p];
-        n[p]=temp;
+        n[p]=n[i];
+        n[i]=temp;
     }
     printf("Array contents are: ");
     for (int j = 0; j < a; j++)
