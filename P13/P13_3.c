@@ -26,12 +26,12 @@ void main()
         
     }
     printf("Products of matrices:\n");
-    for (int i = 0; i < row; i++)
-    {
-        
-        for (int j = 0; j < col; j++)
-        {
-            arrp[i][j]=((arr1[i][j]*arr2[j][i]));
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            arrp[i][j] = 0;
+            for (int k = 0; k < col; k++) {
+                arrp[i][j] += arr1[i][k] * arr2[k][j];
+            }
             printf("%d\t", arrp[i][j]);
         }
         printf("\n");
