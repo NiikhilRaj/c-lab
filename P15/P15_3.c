@@ -1,19 +1,22 @@
 #include<stdio.h>
-void fib(int a)
+void prime(int a)
 {
-    int n1=0, n2=1, fib=0;
-    for (int i = 0; i < a; i++)
+    for (int i = 2; i < a; i++)
     {
-        fib=n1+n2;
-        n1=n2;
-        n2=fib;
+       if ((a%i)==0)
+       {
+        printf("THe number is not prime\n");
+        break;
+       }
+       
     }
-    printf("Fibonacci number: %d\n", fib);
+    printf("THe number is prime\n");
+
 }
 void main()
 {
     int n;
-    printf("ENter the Fibonacci series number: ");
+    printf("Enter a number: ");
     scanf("%d", &n);
-    fib(n);
+    prime(n);
 }

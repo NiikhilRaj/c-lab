@@ -1,22 +1,18 @@
 #include<stdio.h>
-void prime(int a)
-{
-    for (int i = 2; i < a; i++)
+void count(int a){
+    int count=0;
+    while (a>0)
     {
-       if ((a%i)==0)
-       {
-        printf("THe number is not prime\n");
-        break;
-       }
-       
+        if (a/10!=0)
+        {
+            count++;
+            a/=10;
+        }
+        
     }
-    printf("THe number is prime\n");
-
+    
 }
 void main()
 {
-    int n;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    prime(n);
+    
 }

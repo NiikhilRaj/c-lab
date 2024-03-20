@@ -1,17 +1,16 @@
 #include<stdio.h>
-void fact(int a)
+void swap(int a,int b)
 {
-    int fac=1;
-    for (int i = 1; i <= a; i++)
-    {
-        fac*=i;
-    }
-    printf("THe factorial of %d is %d\n", a, fac);
+    printf(" Before swapping: %d %d\n", a,b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf(" After swapping: %d %d\n", a,b);
 }
 void main()
 {
-    int n;
-    printf("ENter a number: ");
-    scanf("%d", &n);
-    fact(n);
+    int n1, n2;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &n1, &n2);
+    swap(n1, n2);
 }
