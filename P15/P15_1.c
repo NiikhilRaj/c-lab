@@ -5,6 +5,7 @@ void capital()
     {
         printf("%c", i);
     }
+    printf("\n");
     
 }
 void small(){

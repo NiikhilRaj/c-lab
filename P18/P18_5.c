@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-int findMax(int arr[], int index, int current_max) {
-  if (index == sizeof(arr) / sizeof(arr[0])) {
+int findMax(int arr[], int index, int n, int current_max) {
+  if (index == n) {
     return current_max;
   }
 
-  return findMax(arr, index + 1, current_max > arr[index] ? current_max : arr[index]);
+  return findMax(arr, index + 1, n, current_max > arr[index] ? current_max : arr[index]);
 }
 
 int main() {
@@ -20,11 +20,9 @@ int main() {
     scanf("%d", &arr[i]);
   }
 
-  int max_element = findMax(arr, 0, arr[0]); 
+  int max_element = findMax(arr, 0, n, arr[0]); 
 
   printf("The maximum element in the array is: %d\n", max_element);
 
   return 0;
-}
-
 }
