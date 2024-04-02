@@ -1,25 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    int binary_number, ones_complement = 0;
+    int binary, onesComplement = 0;
     
     printf("Enter a binary number: ");
-    scanf("%d", &binary_number);
+    scanf("%d", &binary);
     
-    int temp = binary_number;
-    int bit_position = 0;
+    int temp = binary;
+    int bitPosition = 0;
 
+    // Calculate the number of bits in the binary number
     while (temp > 0) {
-        temp >>= 1;
-        bit_position++;
+        temp >>= 1; // Right shift by 1 bit
+        bitPosition++; // Increment the bit position
     }
     
-    for (int i = 0; i < bit_position; i++) {
-        int bit = (binary_number >> i) & 1;
-        ones_complement |= (!bit << i);
+    // Calculate the one's complement
+    for (int i = 0; i < bitPosition; i++) {
+        int bit = (binary >> i) & 1; // Get the i-th bit of the binary number
+        onesComplement |= (!bit << i); // Set the i-th bit of the one's complement
     }
     
-    printf("One's complement: %d\n", ones_complement);
+    printf("One's complement: %d\n", onesComplement);
     
     return 0;
 }
